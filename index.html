@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Registration</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+  <main class="card" role="region" aria-label="Registration form">
+    <div class="header">
+      <h1 class="title">Create your account</h1>
+      <p class="subtitle">Fill in your details to register. Middle name and suffix are optional.</p>
+    </div>
+
+    <form id="regForm" novalidate>
+      <div class="grid two">
+        <div class="field" id="firstNameField">
+          <input class="control" id="firstName" name="firstName" type="text" placeholder=" " autocomplete="given-name" required />
+          <label class="label" for="firstName">First name</label>
+          <div class="error">Please enter your first name.</div>
+        </div>
+
+        <div class="field" id="middleNameField">
+          <input class="control" id="middleName" name="middleName" type="text" placeholder=" " autocomplete="additional-name" />
+          <label class="label" for="middleName">Middle name (optional)</label>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="field" id="lastNameField">
+          <input class="control" id="lastName" name="lastName" type="text" placeholder=" " autocomplete="family-name" required />
+          <label class="label" for="lastName">Last name</label>
+          <div class="error">Please enter your last name.</div>
+        </div>
+
+        <div class="field" id="suffixField">
+          <input class="control" id="suffix" name="suffix" type="text" placeholder=" " />
+          <label class="label" for="suffix">Suffix (optional)</label>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="field" id="mobileField">
+          <input class="control" id="mobile" name="mobile" type="tel" placeholder=" " inputmode="tel" autocomplete="tel" pattern="^[0-9+\\-()\\s]{7,20}$" required />
+          <label class="label" for="mobile">Mobile number</label>
+          <div class="error">Enter a valid mobile number.</div>
+        </div>
+
+        <div class="field" id="emailField">
+          <input class="control" id="email" name="email" type="email" placeholder=" " autocomplete="email" required />
+          <label class="label" for="email">Email</label>
+          <div class="error">Enter a valid email address.</div>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="field" id="batchField">
+          <input class="control" id="batch" name="batch" type="text" placeholder=" " required />
+          <label class="label" for="batch">Batch</label>
+          <div class="error">Please enter your batch.</div>
+        </div>
+
+        <div class="field" id="sectionField">
+          <input class="control" id="section" name="section" type="text" placeholder=" " required />
+          <label class="label" for="section">Section</label>
+          <div class="error">Please enter your section.</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn-primary">Register</button>
+        <button type="reset" class="btn-ghost">Clear</button>
+      </div>
+
+      <p class="footer-note">By registering you agree to our terms and privacy policy.</p>
+    </form>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Registered</div>
+
+  <script src="assets/js/index.js"></script>
+</body>
+</html>
